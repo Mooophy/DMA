@@ -1,3 +1,10 @@
+//!
+//! @author Yue Wang
+//! @date   22.11.2014
+//!
+//! @brief  implementationn for project 1, chapter 1.
+//!
+
 #include <iostream>
 #include <vector>
 #include "../include/dm.hpp"
@@ -74,7 +81,6 @@ void perform_proj01()
     dm::print(find.condition_statement(false,   true))  << " ";
     dm::print(find.condition_statement(false,   false)) << "\n\n";
 }
-
 }//namespace
 
 int main()
