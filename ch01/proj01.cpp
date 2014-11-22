@@ -2,13 +2,7 @@
 #include <vector>
 #include "../include/dm.hpp"
 
-//!
-//! proj 1.
-//! Given the truth values of the propositions p and q, find the
-//! truth values of the conjunction, disjunction, exclusive or,
-//! conditional statement, and biconditional of these proposi-
-//! tions.
-//!
+
 
 namespace dm{
 
@@ -41,7 +35,14 @@ struct Find
 };
 }//namespace
 
-int main()
+//!
+//! proj 1.
+//! Given the truth values of the propositions p and q, find the
+//! truth values of the conjunction, disjunction, exclusive or,
+//! conditional statement, and biconditional of these proposi-
+//! tions.
+//!
+void perform_proj01()
 {
     dm::Find find;
 
@@ -49,15 +50,37 @@ int main()
     dm::print(find.conjunction(true,    true))  << " ";
     dm::print(find.conjunction(true,    false)) << " ";
     dm::print(find.conjunction(false,   true))  << " ";
-    dm::print(find.conjunction(false,   false)) << "\n";
+    dm::print(find.conjunction(false,   false)) << "\n\n";
 
     dm::print("disjunction : ");
     dm::print(find.disjunction(true,    true))  << " ";
     dm::print(find.disjunction(true,    false)) << " ";
     dm::print(find.disjunction(false,   true))  << " ";
-    dm::print(find.disjunction(false,   false)) << "\n";
+    dm::print(find.disjunction(false,   false)) << "\n\n";
 
+    dm::print("exclusive or: ");
+    dm::print(find.exclusive_or(true,    true))  << " ";
+    dm::print(find.exclusive_or(true,    false)) << " ";
+    dm::print(find.exclusive_or(false,   true))  << " ";
+    dm::print(find.exclusive_or(false,   false)) << "\n\n";
 
+    dm::print("bicondition : ");
+    dm::print(find.bicondition(true,    true))  << " ";
+    dm::print(find.bicondition(true,    false)) << " ";
+    dm::print(find.bicondition(false,   true))  << " ";
+    dm::print(find.bicondition(false,   false)) << "\n\n";
+
+    dm::print("condition statement: ");
+    dm::print(find.condition_statement(true,    true))  << " ";
+    dm::print(find.condition_statement(true,    false)) << " ";
+    dm::print(find.condition_statement(false,   true))  << " ";
+    dm::print(find.condition_statement(false,   false)) << "\n\n";
+}
+
+int main()
+{
+    perform_proj01();
+    dm::exit();
     return 0;
 }
 

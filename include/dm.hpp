@@ -30,6 +30,11 @@ std::ostream& print(Printable && to_print)
 {
     return std::cout << std::move(to_print);
 }
+
+void exit()
+{
+    std::cout << "exit normally" << std::endl;
+}
 }//namespace 
 
 #endif
