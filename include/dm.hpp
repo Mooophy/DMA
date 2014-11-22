@@ -33,7 +33,7 @@ std::ostream& print(Printable && to_print)
 
 void exit()
 {
-    std::cout << "exit normally" << std::endl;
+    std::cout << "\nexit normally" << std::endl;
 }
 }//namespace 
 
