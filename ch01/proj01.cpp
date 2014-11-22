@@ -2,8 +2,6 @@
 #include <vector>
 #include "../include/dm.hpp"
 
-
-
 namespace dm{
 
 struct Find
@@ -33,7 +31,7 @@ struct Find
         return (p && q) || (!p && !q);
     }
 };
-}//namespace
+
 
 //!
 //! proj 1.
@@ -77,10 +75,13 @@ void perform_proj01()
     dm::print(find.condition_statement(false,   false)) << "\n\n";
 }
 
+}//namespace
+
 int main()
 {
-    perform_proj01();
+    dm::perform_proj01();
     dm::exit();
+
     return 0;
 }
 
