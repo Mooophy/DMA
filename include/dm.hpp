@@ -5,7 +5,8 @@
 
 namespace dm
 {
-using Proposition = bool;
+using Proposition       =   bool;
+using FuzzyProposition  =   double;
 
 template<typename Printable>
 std::ostream& println(Printable const& to_print)
