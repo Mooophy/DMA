@@ -118,7 +118,7 @@ private:
 
 int main()
 {
-    dm::BitString lhs("101"), rhs("111");
+    dm::BitString lhs("1010"), rhs("1111");
 
     auto res_of_and =   lhs & rhs;
     auto res_of_or  =   lhs | rhs;
@@ -129,4 +129,12 @@ int main()
     dm::println(res_of_xor);
 
     dm::exit();
+    return 0;
 }
+//! output
+//!
+//1010
+//1111
+//0101
+
+//exit normally

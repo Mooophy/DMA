@@ -87,7 +87,19 @@ int main()
 {
     dm::perform_proj01();
     dm::exit();
-
     return 0;
 }
+//! output
+//!
+//conjunction : 1 0 0 0
 
+//disjunction : 1 1 1 0
+
+//exclusive or: 0 1 1 0
+
+//bicondition : 1 0 0 1
+
+//condition statement: 1 0 1 1
+
+
+//exit normally
