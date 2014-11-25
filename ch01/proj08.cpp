@@ -1,3 +1,12 @@
+//!
+//! @author Yue wang
+//! @date   24.11.2014
+//!
+//! proj 8 ch1
+//! Given a function check if is it onto
+//!
+//!
+
 #include "function.hpp"
 #include "../include/utilities.hpp"
 
@@ -20,6 +29,9 @@ int main()
 
     dma::exit();
     return 0;
-    return 0;
 }
-
+//! @output
+//!
+//dma> onto!
+//dma> not onto.
+//dma> exit normally
