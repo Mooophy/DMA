@@ -1,3 +1,10 @@
+//!
+//! @author Yue Wang
+//! @date   22.11.2014
+//!
+//! @brief  a bit string class as headers
+//!
+
 #ifndef BIT_STRING_HPP
 #define BIT_STRING_HPP
 
@@ -7,6 +14,9 @@
 
 namespace dma{
 
+/**
+ * @brief The BitString class
+ */
 class BitString
 {
     friend std::ostream&
@@ -15,43 +25,51 @@ class BitString
         return os << bs.data_;
     }
 
+    /**
+     * @brief -
+     */
     friend BitString
     operator-(BitString const& lhs, BitString const& rhs)
     {
         BitString ret;
         for(auto l=lhs.cbegin(), r=rhs.cbegin(); l != lhs.cend();   ++l,++r)
             ret.push_back((*r - '0')? '0' : *l);
-
         return ret;
     }
 
+    /**
+     * @brief &
+     */
     friend BitString
     operator&(BitString const& lhs, BitString const& rhs)
     {
         BitString ret;
         for(auto l=lhs.cbegin(), r=rhs.cbegin(); l != lhs.cend();   ++l,++r)
             ret.push_back(((*l -'0') & (*r - '0')) + '0');
-
         return ret;
     }
 
+    /**
+     * @brief |
+     */
     friend BitString
     operator|(BitString const& lhs, BitString const& rhs)
     {
         BitString ret;
         for(auto l=lhs.cbegin(), r=rhs.cbegin(); l != lhs.cend();   ++l,++r)
             ret.push_back(((*l -'0') | (*r - '0')) + '0');
-
         return ret;
     }
 
+    /**
+     * @brief ^
+     */
     friend BitString
     operator^(BitString const& lhs, BitString const& rhs)
     {
         BitString ret;
         for(auto l=lhs.cbegin(), r=rhs.cbegin(); l != lhs.cend();   ++l,++r)
             ret.push_back(((*l -'0') ^ (*r - '0')) + '0');
-
         return ret;
     }
 public:
@@ -114,8 +132,6 @@ public:
 
     /**
      * @brief operator !
-     *
-     * complement
      */
     BitString operator !()
     {
