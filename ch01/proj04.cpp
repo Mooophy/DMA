@@ -5,19 +5,19 @@
 //! proj 4 for ch1 DMA
 //!
 
-#include "../include/dm.hpp"
+#include "../include/utilities.hpp"
 #include "bit_string.hpp"
 
 int main()
 {
-    dm::BitString A("0111"), B("1001");
-    dm::println(!A);    //complement
-    dm::println(A | B); //union
-    dm::println(A & B); //intersection
-    dm::println(A ^ B); //xor
-    dm::println(A - B); //difference
+    dma::BitString A("0111"), B("1001");
+    dma::println(!A);    //complement
+    dma::println(A | B); //union
+    dma::println(A & B); //intersection
+    dma::println(A ^ B); //xor
+    dma::println(A - B); //difference
 
-    dm::exit();
+    dma::exit();
     return 0;
 }
 //! @output

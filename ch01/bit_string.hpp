@@ -3,7 +3,7 @@
 
 #include <string>
 #include <stdexcept>
-#include "../include/dm.hpp"
+#include "../include/utilities.hpp"
 
 namespace dma{
 

@@ -7,7 +7,7 @@
 //! fuzzy logic, find the truth value of the disjunction and
 //! the conjunction of p and q.
 //!
-#include "../include/dm.hpp"
+#include "../include/utilities.hpp"
 #include <algorithm>
 
 namespace dma {

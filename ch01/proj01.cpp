@@ -7,9 +7,9 @@
 
 #include <iostream>
 #include <vector>
-#include "../include/dm.hpp"
+#include "../include/utilities.hpp"
 
-namespace dm{
+namespace dma{
 
 struct Find
 {
@@ -49,44 +49,44 @@ struct Find
 //!
 void perform_proj01()
 {
-    dm::Find find;
+    dma::Find find;
 
-    dm::print("conjunction : ");
-    dm::print(find.conjunction(true,    true))  << " ";
-    dm::print(find.conjunction(true,    false)) << " ";
-    dm::print(find.conjunction(false,   true))  << " ";
-    dm::print(find.conjunction(false,   false)) << "\n\n";
+    dma::print("conjunction : ");
+    dma::print(find.conjunction(true,    true))  << " ";
+    dma::print(find.conjunction(true,    false)) << " ";
+    dma::print(find.conjunction(false,   true))  << " ";
+    dma::print(find.conjunction(false,   false)) << "\n\n";
 
-    dm::print("disjunction : ");
-    dm::print(find.disjunction(true,    true))  << " ";
-    dm::print(find.disjunction(true,    false)) << " ";
-    dm::print(find.disjunction(false,   true))  << " ";
-    dm::print(find.disjunction(false,   false)) << "\n\n";
+    dma::print("disjunction : ");
+    dma::print(find.disjunction(true,    true))  << " ";
+    dma::print(find.disjunction(true,    false)) << " ";
+    dma::print(find.disjunction(false,   true))  << " ";
+    dma::print(find.disjunction(false,   false)) << "\n\n";
 
-    dm::print("exclusive or: ");
-    dm::print(find.exclusive_or(true,    true))  << " ";
-    dm::print(find.exclusive_or(true,    false)) << " ";
-    dm::print(find.exclusive_or(false,   true))  << " ";
-    dm::print(find.exclusive_or(false,   false)) << "\n\n";
+    dma::print("exclusive or: ");
+    dma::print(find.exclusive_or(true,    true))  << " ";
+    dma::print(find.exclusive_or(true,    false)) << " ";
+    dma::print(find.exclusive_or(false,   true))  << " ";
+    dma::print(find.exclusive_or(false,   false)) << "\n\n";
 
-    dm::print("bicondition : ");
-    dm::print(find.bicondition(true,    true))  << " ";
-    dm::print(find.bicondition(true,    false)) << " ";
-    dm::print(find.bicondition(false,   true))  << " ";
-    dm::print(find.bicondition(false,   false)) << "\n\n";
+    dma::print("bicondition : ");
+    dma::print(find.bicondition(true,    true))  << " ";
+    dma::print(find.bicondition(true,    false)) << " ";
+    dma::print(find.bicondition(false,   true))  << " ";
+    dma::print(find.bicondition(false,   false)) << "\n\n";
 
-    dm::print("condition statement: ");
-    dm::print(find.condition_statement(true,    true))  << " ";
-    dm::print(find.condition_statement(true,    false)) << " ";
-    dm::print(find.condition_statement(false,   true))  << " ";
-    dm::print(find.condition_statement(false,   false)) << "\n\n";
+    dma::print("condition statement: ");
+    dma::print(find.condition_statement(true,    true))  << " ";
+    dma::print(find.condition_statement(true,    false)) << " ";
+    dma::print(find.condition_statement(false,   true))  << " ";
+    dma::print(find.condition_statement(false,   false)) << "\n\n";
 }
 }//namespace
 
 int main()
 {
-    dm::perform_proj01();
-    dm::exit();
+    dma::perform_proj01();
+    dma::exit();
     return 0;
 }
 //! output

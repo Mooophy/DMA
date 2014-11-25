@@ -7,7 +7,7 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
-#include "../include/dm.hpp"
+#include "../include/utilities.hpp"
 
 namespace dma {
 
