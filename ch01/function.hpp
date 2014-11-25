@@ -1,11 +1,25 @@
+//!
+//! @author Yue Wang
+//! @date   25.11.2014
+//!
+//! @brief  this code implemented a wrapper for function
+//!
+
 #ifndef FUNCTION_HPP
 #define FUNCTION_HPP
 
 #include <iterator>
 #include <algorithm>
+#include <set>
+#include <memory>
 
 namespace dma {
 
+/**
+ * @brief The Function class
+ *
+ * a function wrapper provides a few features
+ */
 template<typename Iter, typename Func>
 class Function
 {
@@ -20,9 +34,12 @@ public:
         func_{std::move(func)}
     {}
 
+    /**
+     * @brief is_one2one
+     */
     bool is_one2one()const
     {
-        return true;
+        return do_is_one2one();
     }
 
     bool is_invertible()const
@@ -40,12 +57,31 @@ public:
         return val;
     }
 
+    Function& reset(Func new_func)
+    {
+        func_ = std::move(new_func);
+        return *this;
+    }
 private:
-    Iter pre_begin_;
-    Iter pre_end_;
-    Iter img_begin_;
-    Iter img_end_;
+    const Iter pre_begin_;
+    const Iter pre_end_;
+    const Iter img_begin_;
+    const Iter img_end_;
     Func func_;
+
+    bool do_is_one2one()const
+    {
+        std::set<Value> set;
+        std::vector<Value> vec;
+        for(auto it = pre_begin_; it != pre_end_; ++it)
+        {
+            auto res = func_(*it);
+            set.insert(res);
+            vec.push_back(res);
+        }
+
+        return set.size() == vec.size();
+    }
 };
 
 }//namespace
