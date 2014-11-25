@@ -101,4 +101,12 @@ int main()
     dm::println(lhs & rhs); //intersection
     dm::println(lhs - rhs); //difference
     dm::println(lhs + rhs); //sum
+
+    return 0;
 }
+//! output
+//!
+//3 5 6
+//1 2 4
+//2 0 0
+//4 7 10
