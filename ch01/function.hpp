@@ -31,25 +31,30 @@ public:
         pre_end_{pre_end},
         img_begin_{img_beg},
         img_end_{img_end},
-        func_{std::move(func)}
-    {}
+        func_{std::move(func)},
+        is_onto_{do_is_onto()},
+        is_one2one_{do_is_one2one()},
+        is_invertible_{false}
+    {
+        is_invertible_  =   is_onto_ && is_one2one_;
+    }
 
     /**
      * @brief is_one2one
      */
     bool is_one2one()const
     {
-        return do_is_one2one();
+        return is_one2one();
     }
 
     bool is_invertible()const
     {
-        return true;
+        return is_invertible_;
     }
 
     bool is_onto()const
     {
-        return true;
+        return is_onto_;
     }
 
     Value inverse(Value const& val)const
@@ -59,7 +64,10 @@ public:
 
     Function& reset(Func new_func)
     {
-        func_ = std::move(new_func);
+        func_           =   std::move(new_func);
+        is_onto_        =   do_is_onto();
+        is_one2one_     =   do_is_one2one();
+        is_invertible_  =   is_onto_ && is_one2one_;
         return *this;
     }
 private:
@@ -68,6 +76,9 @@ private:
     const Iter img_begin_;
     const Iter img_end_;
     Func func_;
+    bool is_onto_;
+    bool is_one2one_;
+    bool is_invertible_;
 
     bool do_is_one2one()const
     {
@@ -81,6 +92,15 @@ private:
         }
 
         return set.size() == vec.size();
+    }
+
+    bool do_is_onto()const
+    {
+        std::set<Value> set;
+        for(auto  it = pre_begin_; it != pre_end_; ++it)
+            set.insert(func_(*it));
+
+        return std::equal(set.cbegin(), set.cend(), img_begin_);
     }
 };
 
