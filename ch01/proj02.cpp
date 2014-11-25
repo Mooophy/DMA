@@ -11,17 +11,17 @@
 
 int main()
 {
-    dm::BitString lhs("1010"), rhs("1111");
+    dma::BitString lhs("1010"), rhs("1111");
 
     auto res_of_and =   lhs & rhs;
     auto res_of_or  =   lhs | rhs;
     auto res_of_xor =   lhs ^ rhs;
 
-    dm::println(res_of_and);
-    dm::println(res_of_or);
-    dm::println(res_of_xor);
+    dma::println(res_of_and);
+    dma::println(res_of_or);
+    dma::println(res_of_xor);
 
-    dm::exit();
+    dma::exit();
     return 0;
 }
 //! output

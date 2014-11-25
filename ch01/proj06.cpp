@@ -9,7 +9,7 @@
 #include <vector>
 #include "../include/dm.hpp"
 
-namespace dm {
+namespace dma {
 
 using Element = std::pair<std::string, double>;
 
@@ -73,25 +73,39 @@ private:
 
 int main()
 {
-    using V = std::vector<dm::Element>;
-    V lhs = {
+    using V = std::vector<dma::Element>;
+
+    V lhs{
         {"moophy", 0.2},
         {"alan",0.9},
         {"google",0.7}
     };
 
-    V rhs = {
+    V rhs{
         {"moophy", 0.1},
         {"alan",0.2},
         {"google",0.4}
     };
 
-    dm::FuzzySet A(lhs), B(rhs);
-    dm::println(!A);
-    dm::println(A | B);
-    dm::println(A & B);
+    dma::FuzzySet A(lhs), B(rhs);
+    dma::println(!A);       //complement
+    dma::println(A | B);    //union
+    dma::println(A & B);    //intersection
 
     return 0;
 }
+//! output
+//!
+//moophy 0.8
+//alan 0.1
+//google 0.3
+
+//moophy 0.2
+//alan 0.9
+//google 0.7
+
+//moophy 0.1
+//alan 0.2
+//google 0.4
 
 

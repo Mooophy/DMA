@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-namespace dm
+namespace dma
 {
 using Proposition       =   bool;
 using FuzzyProposition  =   double;

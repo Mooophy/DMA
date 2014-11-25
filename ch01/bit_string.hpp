@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include "../include/dm.hpp"
 
-namespace dm {
+namespace dma{
 
 class BitString
 {

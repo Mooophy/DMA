@@ -9,7 +9,7 @@
 #include <iostream>
 #include "../include/dm.hpp"
 
-namespace dm {
+namespace dma {
 
 class MultiSet
 {
@@ -95,12 +95,12 @@ int main()
 {
     using V = std::vector<std::size_t>;
 
-    dm::MultiSet lhs(V({3,2,4}));
-    dm::MultiSet rhs(V({1,5,6}));
-    dm::println(lhs | rhs); //union
-    dm::println(lhs & rhs); //intersection
-    dm::println(lhs - rhs); //difference
-    dm::println(lhs + rhs); //sum
+    dma::MultiSet lhs(V({3,2,4}));
+    dma::MultiSet rhs(V({1,5,6}));
+    dma::println(lhs | rhs); //union
+    dma::println(lhs & rhs); //intersection
+    dma::println(lhs - rhs); //difference
+    dma::println(lhs + rhs); //sum
 
     return 0;
 }

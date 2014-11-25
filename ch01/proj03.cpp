@@ -10,7 +10,7 @@
 #include "../include/dm.hpp"
 #include <algorithm>
 
-namespace dm {
+namespace dma {
 
 /**
  * @brief functor to find disjunction and conjunction for fuzzy propositions.
@@ -33,15 +33,15 @@ struct Fuzzy
 
 int main()
 {
-    dm::Fuzzy fz;
-    dm::FuzzyProposition p = 0.4, q = 0.8;
+    dma::Fuzzy fz;
+    dma::FuzzyProposition p = 0.4, q = 0.8;
     auto conj = fz.find_conjunction(p,q);
     auto disj = fz.find_disjunction(p,q);
 
-    dm::println(conj);
-    dm::println(disj);
+    dma::println(conj);
+    dma::println(disj);
 
-    dm::exit();
+    dma::exit();
     return 0;
 }
 //! output
