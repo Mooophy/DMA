@@ -12,6 +12,7 @@
 #include <algorithm>
 #include <set>
 #include <memory>
+#include <stdexcept>
 
 namespace dma {
 
@@ -59,7 +60,7 @@ public:
 
     Value inverse(Value const& val)const
     {
-        return val;
+        return do_inverse(val);
     }
 
     Function& reset(Func new_func)
@@ -101,6 +102,13 @@ private:
             set.insert(func_(*it));
 
         return std::equal(set.cbegin(), set.cend(), img_begin_);
+    }
+
+    Value do_inverse(Value const& val)const
+    {
+        for(auto it = pre_begin_; it != pre_end_; ++it)
+            if(val == func_(*it))   return *it;
+        throw std::logic_error{"not invertible."};
     }
 };
 
