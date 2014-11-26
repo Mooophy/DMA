@@ -1,3 +1,11 @@
+//!
+//! @author Yue wang
+//! @date   24.11.2014
+//!
+//! proj 9 ch1
+//! Given inverse function.
+//!
+
 #include "function.hpp"
 #include "../include/utilities.hpp"
 
