@@ -1,3 +1,9 @@
+//!
+//! @author Yue Wang
+//! @date   27.11.2014
+//!
+//! @brief  implementationn for search algorithms, chapter 2.
+//!
 #ifndef SEARCH_HPP
 #define SEARCH_HPP
 
@@ -46,5 +52,4 @@ It binary_search(It first, It last, Value<It> val)
 }
 
 }//namespace
-
 #endif // SEARCH_HPP

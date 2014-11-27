@@ -32,6 +32,14 @@ std::ostream& print(Printable && to_print)
     return std::cout << std::move(to_print);
 }
 
+template<typename Range>
+inline std::ostream& println_range(Range const& rng)
+{
+    std::cout << "dma> ";
+    for(auto elem : rng)    std::cout << elem << " ";
+    return std::cout << std::endl;
+}
+
 void exit()
 {
     dma::println("exit normally");
