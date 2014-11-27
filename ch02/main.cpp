@@ -5,8 +5,8 @@
 
 int main()
 {
-    std::vector<int> v{1,22,3,4,5,6,7,8};
-    dma::println(*dma::linear_search(v.cbegin(),v.cend(),22));
+    std::vector<int> v{5,6,7,8,9,12345};
+    dma::println(*dma::binary_search(v.cbegin(),v.cend(),12345));
 
     return 0;
 }
