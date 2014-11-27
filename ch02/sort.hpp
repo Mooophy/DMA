@@ -18,7 +18,7 @@ namespace dma {
 template<typename It>
 void bubble_sort(It first, It last)
 {
-    if(last-first < 2 ) return;
+    if(last-first < 2)  return;
     using std::swap;
     for(auto i=first; i != last-1; ++i)
         for(auto j=first; j != first+(last-1-i); ++j)
@@ -32,7 +32,7 @@ void bubble_sort(It first, It last)
 template<typename It>
 void insertion_sort(It first, It last)
 {
-    if(last - first < 2)    return;
+    if(last-first < 2)  return;
     for(auto i = first+1; i != last; ++i){
         auto key = *i;
         auto j = i-1;
