@@ -9,6 +9,6 @@ O( log base (num) )
 def get_expansion(num, base) :
 	expansion = []
 	while num>0 :
-		expansion = [num%base] + ret
+		expansion = [num%base] + expansion
 		num //= base
 	return expansion
