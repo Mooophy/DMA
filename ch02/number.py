@@ -7,8 +7,8 @@ algorithms from ch02, Rosen's DMA 5th
 O( log base (num) )
 '''
 def get_expansion(num, base) :
-	ret = []
+	expansion = []
 	while num>0 :
-		ret = [num%base] + ret
+		expansion = [num%base] + ret
 		num //= base
-	return ret
+	return expansion
