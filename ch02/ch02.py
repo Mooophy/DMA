@@ -1,43 +1,43 @@
 '''
-algorithms from ch02 DMA
-    by Yue Wang 28.11.2014
+algorithms from ch02, DMA.
+    by Yue Wang
+    28.11.2014
 '''
 
 '''
+max
 '''
 def max(seq):
     max = seq[0]
     for elem in seq:
-        if elem > max:
-            max = elem
+        if elem > max   :   max = elem
     return max
 
 '''
+linear seach
 '''
 def linear_search(seq,val):
     for idx,elem in enumerate(seq):
-        if elem == val:return idx
+        if elem == val  :   return idx
     return None
 
 '''
+binary search
 '''
 def binary_search(seq,val):
     beg = 0
     end = len(seq)
     while beg < end:
         mid = beg + (end-beg)//2
-        if seq[mid] == val:
-            return mid
-        elif seq[mid] > val:
-            end = mid
-        else:
-            beg = mid
+        if seq[mid] == val  :   return mid
+        elif seq[mid] > val :   end = mid
+        else                :   beg = mid
     return None
 
 '''
+insertion sort
 '''
 def insertion_sort(seq):
-    print("testing\n")
     if len(seq) < 2 : return;
     for i in range(1,len(seq)):
         key = seq[i]
