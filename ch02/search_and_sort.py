@@ -56,32 +56,3 @@ def bubble_sort(seq):
     for i in range(size-1) :
         for j in range(size-1-i):
             if(seq[j] > seq[j+1]): seq[j],seq[j+1] = seq[j+1], seq[j]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
