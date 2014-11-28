@@ -21,4 +21,4 @@
 *.user
 *Desktop_gcc*
 *.pro
-
+*__pycache__*
