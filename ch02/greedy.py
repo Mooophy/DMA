@@ -6,7 +6,7 @@ algorithms from ch02, Rosen's Discrete Mathematics and its Applications 5th
 '''
 
 '''
-Greedy change
+Greedy change O(n^2)
 '''
 def get_change(coins, total):
     ret = []
