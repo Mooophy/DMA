@@ -5,7 +5,7 @@ algorithms from ch02, DMA.
 '''
 
 '''
-max
+max O(n)
 '''
 def max(seq):
     max = seq[0]
@@ -14,7 +14,7 @@ def max(seq):
     return max
 
 '''
-linear seach
+linear seach O(n)
 '''
 def linear_search(seq,val):
     for idx,elem in enumerate(seq):
@@ -22,7 +22,7 @@ def linear_search(seq,val):
     return None
 
 '''
-binary search
+binary search O(lg n)
 '''
 def binary_search(seq,val):
     beg = 0
@@ -35,10 +35,10 @@ def binary_search(seq,val):
     return None
 
 '''
-insertion sort
+insertion sort O(lg n ^ 2)
 '''
 def insertion_sort(seq):
-    if len(seq) < 2 : return;
+    if len(seq) < 2 : return
     for i in range(1,len(seq)):
         key = seq[i]
         j = i-1
@@ -46,6 +46,36 @@ def insertion_sort(seq):
             seq[j+1] = seq[j]
             j -= 1
         seq[j+1] = key
+
+'''
+bubble sort O(lg n ^ 2)
+'''
+def bubble_sort(seq):
+    size = len(seq)
+    if size < 2 : return
+    for i in range(size-1) :
+        for j in range(size-1-i):
+            if(seq[j] > seq[j+1]): seq[j],seq[j+1] = seq[j+1], seq[j]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
