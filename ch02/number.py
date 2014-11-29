@@ -48,3 +48,19 @@ def multiply(lhs, rhs) :
     for num in list_for_ret :
         ret += num
     return ret
+
+'''
+Computing div and mod
+O(n)
+@note rhs must be greater than 0
+'''
+def division(lhs, rhs) :
+    quotient    = 0
+    remainder   = abs(lhs)
+    while remainder >= rhs :
+        remainder   -= rhs
+        quotient    += 1
+    if lhs<0 and remainder>0 :
+        remainder   = rhs - remainder
+        quotient    = -(quotient+1)
+    return (quotient,remainder)
