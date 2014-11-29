@@ -64,3 +64,16 @@ def division(lhs, rhs) :
         remainder   = rhs - remainder
         quotient    = -(quotient+1)
     return (quotient,remainder)
+
+'''
+(b^n)%m
+'''
+def modular_exponentiation(b,n,m) :
+    expansion = get_expansion(n)
+    result = 1
+    power = b % m
+    for bit in expansion :
+        if bit :
+            result = result * power % m
+        power = power ** 2 % m
+    return result
