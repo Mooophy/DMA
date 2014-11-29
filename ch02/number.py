@@ -67,7 +67,7 @@ def division(lhs, rhs) :
 
 '''
 Modular Exponentiation i.e. (b^n)%m
-O((lg m)^2 (lg n)) 
+O((lg m)^2 (lg n))
 '''
 def modular_exponentiation(b,n,m) :
     expansion = get_expansion(n)
@@ -78,3 +78,14 @@ def modular_exponentiation(b,n,m) :
             result = result * power % m
         power = power ** 2 % m
     return result
+
+'''
+Euclidean Algorithm
+O(lg b)
+'''
+def gcd(lhs, rhs) :
+    while rhs :
+        rmd = lhs % rhs
+        lhs = rhs
+        rhs = rmd
+    return lhs
