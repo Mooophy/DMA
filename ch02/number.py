@@ -15,6 +15,7 @@ def get_expansion(num, base=2) :
     return expansion
 
 '''
+Addition of Integers
 O(n)
 '''
 def add(lhs, rhs, base=2) :
@@ -31,4 +32,19 @@ def add(lhs, rhs, base=2) :
         carry = digit_sum//base
     if(carry>0):
         ret = [carry] + ret
+    return ret
+
+'''
+Multiplying Intergers
+O(n)
+'''
+def multiply(lhs, rhs) :
+    l = get_expansion(lhs)
+    list_for_ret = []
+    for i in range(len(l)) :
+        if l[i] :
+            list_for_ret += [rhs << (len(l) - i - 1)]
+    ret = 0
+    for num in list_for_ret :
+        ret += num
     return ret
