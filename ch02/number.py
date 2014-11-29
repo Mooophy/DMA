@@ -31,6 +31,3 @@ def add(lhs, rhs, base=2) :
     if(carry>0):
         ret = [carry] + ret
     return ret 
-
-
-
