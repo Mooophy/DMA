@@ -9,7 +9,7 @@ A simple matrix
 class Matrix:
     def __init__(self,data):
         self.data_ = data
-    def print(self):
+    def write(self):
         for row in self.data_:
             for elem in row:
                 print(elem, end=' ')
