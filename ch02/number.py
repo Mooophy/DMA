@@ -66,7 +66,8 @@ def division(lhs, rhs) :
     return (quotient,remainder)
 
 '''
-(b^n)%m
+Modular Exponentiation i.e. (b^n)%m
+O((lg m)^2 (lg n)) 
 '''
 def modular_exponentiation(b,n,m) :
     expansion = get_expansion(n)
