@@ -254,6 +254,7 @@ output :
 ```
 
 ######project13 Least common multiple
+```python
 def lcm(lhs, rhs):
     import number as num
     return lhs * rhs // num.gcd(lhs, rhs)
@@ -263,4 +264,4 @@ print(lcm(60, 90))
 output :
 180
 """
-
+```
