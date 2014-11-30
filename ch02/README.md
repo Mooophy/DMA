@@ -195,3 +195,22 @@ output :
 [1, 1, 2, 2, 2, 3, 3, 4, 6, 7, 7, 8, 9, 34, 56] 105
 """
 ```
+
+######project010
+```python
+def is_prime(num):
+    if num < 2:
+        return False
+    for checker in range(3, num//2+1, 2):
+        if num % checker == 0:
+            return False
+    return True
+
+for number in range(900, 1000):
+    if is_prime(number):
+        print(number, end=" ")
+"""
+output :
+907 911 919 929 937 941 947 953 967 971 977 983 991 997
+"""
+```
