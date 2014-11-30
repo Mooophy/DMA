@@ -3,6 +3,7 @@ Chapter 02
 ######project01
 ```python
 import search_and_sort as sas
+
 li = [1, 2, 3, 5, 2, 1]
 print(sas.max(li))
 """
@@ -14,7 +15,6 @@ output :
 ######project02
 ```python
 import search_and_sort as ss
-
 
 def project02(li):
     maximum = ss.max(li)
@@ -43,6 +43,7 @@ output :
 ######project03
 ```python
 import search_and_sort as ss
+
 li = [78,1, 2, 3, 6, 9]
 print(ss.linear_search(li, 3))
 """
@@ -54,6 +55,7 @@ output :
 ######project04
 ```python
 import search_and_sort as ss
+
 li = [78,1, 2, 3, 6, 9]
 print(ss.binary_search(li, 3))
 """
@@ -65,6 +67,7 @@ output :
 ######project05
 ```python
 import search_and_sort as ss
+
 li = [78,1, 2, 3, 6, 9]
 ss.bubble_sort(li)
 print(li)
@@ -77,11 +80,24 @@ output :
 ######project06
 ```python
 import search_and_sort as ss
+
 li = [78,1, 2, 3, 6, 9]
 ss.insertion_sort(li)
 print(li)
 """
 output :
 [1, 2, 3, 6, 9, 78]
+"""
+```
+
+######project07
+```python
+import greedy as grd
+
+coins = [25, 10, 5, 1]
+print(grd.get_change(coins, 149))
+"""
+output :
+[25, 25, 25, 25, 25, 10, 10, 1, 1, 1, 1]
 """
 ```
