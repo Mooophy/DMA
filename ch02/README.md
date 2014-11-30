@@ -3,7 +3,6 @@ Chapter 02
 ######project01
 ```python
 """
-project 1
 output :
 5
 """
