@@ -13,11 +13,11 @@ output :
 
 ######project02
 ```python
-import search_and_sort as sas
+import search_and_sort as ss
 
 
 def project02(li):
-    maximum = sas.max(li)
+    maximum = ss.max(li)
     size = len(li)
     first = 0
     for idx in range(size):
@@ -61,3 +61,14 @@ output :
 3
 """
 ```
+
+######project05
+import search_and_sort as ss
+li = [78,1, 2, 3, 6, 9]
+ss.bubble_sort(li)
+print(li)
+"""
+output :
+[1, 2, 3, 6, 9, 78]
+"""
+
