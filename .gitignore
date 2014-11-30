@@ -22,3 +22,4 @@
 *Desktop_gcc*
 *.pro
 *__pycache__*
+*.idea*
