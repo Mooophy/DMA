@@ -214,3 +214,29 @@ output :
 907 911 919 929 937 941 947 953 967 971 977 983 991 997
 """
 ```
+
+######project11 encrypt and decrypt using Caesar cipher
+```python
+def encrypt(msg, offset=3):
+    ret = ''
+    for c in msg:
+        ret += chr((ord(c) + offset) % 255)
+    return ret
+
+
+def decrypt(msg, offset=3):
+    ret = ''
+    for c in msg:
+        ret += chr((ord(c) - offset) % 255)
+    return ret
+
+
+sonnet = encrypt("From fairest creatures we desire increase")
+print(sonnet)
+dec = decrypt(sonnet)
+print(dec)
+"""
+output :
+907 911 919 929 937 941 947 953 967 971 977 983 991 997
+"""
+```
