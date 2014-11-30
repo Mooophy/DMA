@@ -63,6 +63,7 @@ output :
 ```
 
 ######project05
+```python
 import search_and_sort as ss
 li = [78,1, 2, 3, 6, 9]
 ss.bubble_sort(li)
@@ -71,4 +72,4 @@ print(li)
 output :
 [1, 2, 3, 6, 9, 78]
 """
-
+```
