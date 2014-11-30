@@ -39,3 +39,14 @@ output :
 1 3
 """
 ```
+
+######project03
+```python
+import search_and_sort as ss
+li = [78,1, 2, 3, 6, 9]
+print(ss.linear_search(li, 3))
+"""
+output :
+3
+"""
+```
