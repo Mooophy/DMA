@@ -241,3 +241,15 @@ Iurp#idluhvw#fuhdwxuhv#zh#ghvluh#lqfuhdvh
 From fairest creatures we desire increase
 """
 ```
+
+######project12 Greatest common divisor
+```python
+import number as num
+
+print(num.gcd(60, 90))
+"""
+output :
+30
+"""
+```
+
