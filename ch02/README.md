@@ -73,3 +73,15 @@ output :
 [1, 2, 3, 6, 9, 78]
 """
 ```
+
+######project06
+```python
+import search_and_sort as ss
+li = [78,1, 2, 3, 6, 9]
+ss.insertion_sort(li)
+print(li)
+"""
+output :
+[1, 2, 3, 6, 9, 78]
+"""
+```
