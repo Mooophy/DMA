@@ -101,3 +101,50 @@ output :
 [25, 25, 25, 25, 25, 10, 10, 1, 1, 1, 1]
 """
 ```
+
+######project08
+```python
+def linear_search_and_count(seq, val):
+    """
+    :rtype : int, int
+    """
+    pos = None
+    cnt = 0
+    for i in range(len(seq)):
+        cnt += 1
+        if seq[i] == val:
+            pos = i
+            break
+    return pos, cnt
+
+
+def binary_search_and_count(seq, val):
+    """
+    :rtype : int, int
+    """
+    pos = None
+    cnt = 0
+    beg = 0
+    end = len(seq)
+    while beg < end:
+        mid = beg + (end - beg)//2
+        if seq[mid] == val:
+            cnt += 1
+            pos = mid
+            break
+        elif seq[mid] < val:
+            cnt += 1
+            beg = mid
+        else:
+            end = mid
+    return pos, cnt
+
+seq = [num for num in range(50000)]
+print(linear_search_and_count(seq, 48800))
+print(binary_search_and_count(seq, 48800))
+"""
+output :
+(48800, 48801)
+(48800, 12)
+"""
+```
