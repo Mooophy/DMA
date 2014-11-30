@@ -196,7 +196,7 @@ output :
 """
 ```
 
-######project010
+######project10
 ```python
 def is_prime(num):
     if num < 2:
