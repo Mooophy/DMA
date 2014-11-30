@@ -148,3 +148,50 @@ output :
 (48800, 12)
 """
 ```
+
+######project09
+```python
+def insertion_sort_and_count(seq):
+    size = len(seq)
+    if size < 2:
+        return 0
+
+    cnt = 0
+    for i in range(1, size):
+        key = seq[i]
+        j = i-1
+        while j > -1 and seq[j] > key:
+            seq[j+1] = seq[j]
+            j -= 1
+            cnt += 1
+        seq[j+1] = key
+    return cnt
+
+
+def bubble_sort_and_count(seq):
+    size = len(seq)
+    if size < 2:
+        return 0
+
+    cnt = 0
+    for i in range(size-1):
+        for j in range(size-1-i):
+            cnt += 1
+            if seq[j] > seq[j+1]:
+                seq[j], seq[j+1] = seq[j+1], seq[j]
+    return cnt
+
+sequence1 = [1, 2, 6, 7, 1, 2, 3, 4, 56, 7, 8, 9, 3, 34, 2]
+sequence2 = list(sequence1)
+
+count1 = insertion_sort_and_count(sequence1)
+print(sequence1, count1)
+
+count2 = bubble_sort_and_count(sequence2)
+print(sequence2, count2)
+"""
+output :
+[1, 1, 2, 2, 2, 3, 3, 4, 6, 7, 7, 8, 9, 34, 56] 30
+[1, 1, 2, 2, 2, 3, 3, 4, 6, 7, 7, 8, 9, 34, 56] 105
+"""
+```
