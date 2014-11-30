@@ -30,6 +30,7 @@ def project02(li):
             last = idx
             break
     return first, last
+    
 seq = [1, 3, 2, 3, 1]
 fis, las = project02(seq)
 print(fis, las)
