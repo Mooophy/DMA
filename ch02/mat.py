@@ -14,3 +14,16 @@ def multiply(lhs, rhs):
             for com in range(common_range):
                 product[r][c] += lhs[r][com] * rhs[com][c]
     return product
+
+
+def boolean_multiply(lhs, rhs):
+    rows = len(lhs)
+    cols = len(rhs[0])
+    common_range = len(lhs[0])
+    product = [[0 for _ in range(cols)] for _ in range(rows)]
+    for r in range(rows):
+        for c in range(cols):
+            for com in range(common_range):
+                product[r][c] |= lhs[r][com] and rhs[com][c]
+    return product
+
