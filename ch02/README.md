@@ -265,3 +265,16 @@ output :
 180
 """
 ```
+######project14 Prime factorization
+```python
+def get_prime_factorization(num):
+    factorization = [d for d in range(1, num//2 + 1) if num % d == 0]
+    import number as n
+    return [elem for elem in factorization if n.is_prime(elem)]
+
+print(get_prime_factorization(80))
+"""
+output :
+[2, 4, 5]
+"""
+```
