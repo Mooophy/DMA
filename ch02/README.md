@@ -329,7 +329,6 @@ output :
 ```
 
 ######project18 Random generator by linear congruential generator Xn+1 = (aXn + c) % c
-```python
 def generate_pseudorandom_sequence(n, m, a, c, x0):
     """
     :argument m must be the largest among m,a, and x0
@@ -340,10 +339,10 @@ def generate_pseudorandom_sequence(n, m, a, c, x0):
         seq.append(elem)
     return seq
 
-print(generate_pseudorandom_sequence(10, 2100000, 2, 1, 9))
+print(generate_pseudorandom_sequence(10, 21, 2, 1, 9))
 """
 output :
-[1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200]
-[0, 1, 2, 2, 1, 5, 6, 1, 0, 0, 0, 0, 0, 0, 0]
+[9, 19, 18, 16, 12, 4, 9, 19, 18, 16]
 """
+
 ```
