@@ -278,3 +278,18 @@ output :
 [2, 4, 5]
 """
 ```
+
+######project15 Expansion
+```python
+def project15(num, base):
+    import number as n
+    return n.get_expansion(num, base)
+
+print(project15(10, 2))
+print(project15(20, 16))
+"""
+output :
+[1, 0, 1, 0]
+[1, 4]
+"""
+```
