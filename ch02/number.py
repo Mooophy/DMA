@@ -80,3 +80,21 @@ def is_prime(num):
         if num % checker == 0:
             return False
     return True
+
+
+def make_factorial_list(size=13):
+    ret = [0] * size
+    ret[0] = 1
+    for idx in range(1, size):
+        ret[idx] = idx * ret[idx-1]
+    return ret
+
+
+def cantor_expansion(num):
+    fac_seq = make_factorial_list(15)
+    ret = [0] * 15
+    for curr in reversed(range(15)):
+        while fac_seq[curr] <= num:
+            num -= fac_seq[curr]
+            ret[curr] += 1
+    return ret
