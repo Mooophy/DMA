@@ -366,3 +366,20 @@ output :
 [[199, 290], [435, 634]][[199, 290], [435, 634]]
 """
 ```
+
+######project23 Is symmetric?
+```python
+def is_symmetric(m):
+    return m == [list(i) for i in zip(*m)]
+
+m1 = [(1, 2), (3, 4)]
+print(is_symmetric(m1))
+m2 = [[1, 1, 0], [1, 0, 1],[0, 1, 0]]
+print(is_symmetric(m2))
+
+"""
+output :
+False
+True
+"""
+```
