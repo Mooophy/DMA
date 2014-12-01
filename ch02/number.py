@@ -76,7 +76,7 @@ def gcd(lhs, rhs):
 def is_prime(num):
     if num < 2:
         return False
-    for checker in range(3, num//2+1, 2):
+    for checker in range(3, num//2+1):
         if num % checker == 0:
             return False
     return True
