@@ -298,3 +298,32 @@ output :
 ```python
 #use number.modular_exponentiation
 ```
+
+######project17 Cantor expansion
+```python
+def make_factorial_list(size=13):
+    ret = [0] * size
+    ret[0] = 1
+    for idx in range(1, size):
+        ret[idx] = idx * ret[idx-1]
+    return ret
+
+
+def cantor_expansion(num):
+    fac_seq = make_factorial_list(15)
+    ret = [0] * 15
+    for curr in reversed(range(15)):
+        while fac_seq[curr] <= num:
+            num -= fac_seq[curr]
+            ret[curr] += 1
+    return ret
+
+
+expansion = cantor_expansion(10001)
+print(expansion)
+"""
+output :
+[1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200]
+[0, 1, 2, 2, 1, 5, 6, 1, 0, 0, 0, 0, 0, 0, 0]
+"""
+```
