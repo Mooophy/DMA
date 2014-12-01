@@ -293,3 +293,8 @@ output :
 [1, 4]
 """
 ```
+
+######project16 `a^b mod m`
+```python
+#use number.modular_exponentiation
+```
