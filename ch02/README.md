@@ -346,3 +346,23 @@ output :
 [9, 19, 18, 16, 12, 4, 9, 19, 18, 16]
 """
 ```
+
+######project22 Matrix power
+```python
+def matrix_power(m, power):
+    import mat
+    result = m
+    for p in range(power-1):
+        result = mat.multiply(result, m)
+    return result
+
+
+m = [[1, 2], [3, 4]]
+ret = matrix_power(m, 4)
+print(ret)
+
+"""
+output :
+[[199, 290], [435, 634]][[199, 290], [435, 634]]
+"""
+```
