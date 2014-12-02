@@ -422,3 +422,8 @@ meet : [[0, 0], [0, 1]]
 ```python
 #uisng boolean_multiply in mat.py
 ```
+
+######project27 Boolean matrix power
+```python
+#similar to project 22, but use meet and join instead.
+```
