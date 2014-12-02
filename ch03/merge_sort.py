@@ -10,7 +10,7 @@ def merge(seq, first, mid, last):
             seq[curr] = right[r]
             r += 1
         curr += 1
-    (x, rest) = (r, right) if l == left_size else (l, left)
+    (x, rest) = (r, right) if (l == left_size) else (l, left)
     while x != len(rest):
         seq[curr] = rest[x]
         (x, curr) = (x+1, curr+1)
