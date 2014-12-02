@@ -1,8 +1,7 @@
 def merge(seq, first, mid, last):
     left = seq[first: mid]
     right = seq[mid: last]
-    l = 0
-    r = 0
+    l, r = 0, 0
     curr = first
     while l != len(left) and r != len(right):
         if left[l] < right[r]:
