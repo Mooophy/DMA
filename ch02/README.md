@@ -417,3 +417,8 @@ join : [[1, 0], [0, 1]]
 meet : [[0, 0], [0, 1]]
 """
 ```
+
+######project26 Boolean product
+```python
+#uisng boolean_multiply in mat.py
+```
