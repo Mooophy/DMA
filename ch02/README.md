@@ -413,36 +413,7 @@ print("meet :", meet(r, l))
 
 """
 output :
-def join(lhs, rhs):
-    rows = len(lhs)
-    cols = len(lhs[0])
-    ret = [[0 for _ in range(cols)] for _ in range(rows)]
-    for r in range(rows):
-        for c in range(cols):
-            ret[r][c] = lhs[r][c] or rhs[r][c]
-    return ret
-
-
-def meet(lhs, rhs):
-    rows = len(lhs)
-    cols = len(lhs[0])
-    ret = [[0 for _ in range(cols)] for _ in range(rows)]
-    for r in range(rows):
-        for c in range(cols):
-            ret[r][c] = lhs[r][c] and rhs[r][c]
-    return ret
-
-l = [[1, 0], [0, 1]]
-r = [[0, 0], [0, 1]]
-print("join :", join(r, l))
-print("meet :", meet(r, l))
-
-
-"""
-output :
 join : [[1, 0], [0, 1]]
 meet : [[0, 0], [0, 1]]
-"""
-
 """
 ```
