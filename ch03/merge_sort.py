@@ -35,3 +35,9 @@ def merge_sort(seq, first, last):
 li = [4, 3, 2, 1]
 merge_sort(li, 0, len(li))
 print(li)
+
+
+"""
+output:
+[1, 2, 3, 4]
+"""
