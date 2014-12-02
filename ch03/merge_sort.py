@@ -36,8 +36,12 @@ li = [4, 3, 2, 1]
 merge_sort(li, 0, len(li))
 print(li)
 
+ls = ["aaa", "1234", "hello", "google", "hi"]
+merge_sort(ls, 0, len(ls))
+print(ls)
 
 """
 output:
 [1, 2, 3, 4]
+
 """
