@@ -12,16 +12,11 @@ def merge(seq, first, mid, last):
             seq[curr] = right[r]
             r += 1
         curr += 1
-    if l == len(left):
-        while r != len(right):
-            seq[curr] = right[r]
-            curr += 1
-            r += 1
-    else:
-        while l != len(left):
-            seq[curr] = left[l]
-            curr += 1
-            l += 1
+    (x, rest) = (r, right) if l == len(left) else (l, left)
+    for idx in range(x, len(rest)):
+        seq[curr] = rest[x]
+        curr += 1
+        x += 1
 
 
 def merge_sort(seq, first, last):
