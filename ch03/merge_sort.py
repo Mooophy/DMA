@@ -43,5 +43,5 @@ print(ls)
 """
 output:
 [1, 2, 3, 4]
-
+['1234', 'aaa', 'google', 'hello', 'hi']
 """
