@@ -11,7 +11,7 @@ def merge(seq, first, mid, last):
             r += 1
         curr += 1
     (x, rest) = (r, right) if l == left_size else (l, left)
-    for idx in range(x, len(rest)):
+    while x != len(rest):
         seq[curr] = rest[x]
         (x, curr) = (x+1, curr+1)
 
