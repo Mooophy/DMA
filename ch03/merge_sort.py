@@ -1,6 +1,6 @@
 def merge(seq, first, mid, last):
     (left, right) = (seq[first: mid], seq[mid: last])
-    (l, r, curr) = (0, 0, first)
+    (l, r,  curr) = (0, 0, first)
     (left_size, right_size) = (len(left), len(right))
     while l != left_size and r != right_size:
         if left[l] < right[r]:
@@ -13,8 +13,7 @@ def merge(seq, first, mid, last):
     (x, rest) = (r, right) if l == left_size else (l, left)
     for idx in range(x, len(rest)):
         seq[curr] = rest[x]
-        curr += 1
-        x += 1
+        (x, curr) = (x+1, curr+1)
 
 
 def merge_sort(seq, first, last):
