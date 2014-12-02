@@ -1,6 +1,5 @@
 def merge(seq, first, mid, last):
-    left = seq[first: mid]
-    right = seq[mid: last]
+    (left, right) = (seq[first: mid], seq[mid: last])
     l, r = 0, 0
     curr = first
     while l != len(left) and r != len(right):
