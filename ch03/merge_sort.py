@@ -24,7 +24,7 @@ def merge_sort(seq, first, last):
         merge(seq, first, mid, last)
 
 
-li = [4, 3, 2, 1]
+li = [3, 2, 1, 88, 1000, -1]
 merge_sort(li, 0, len(li))
 print(li)
 
