@@ -1,11 +1,11 @@
 def quick_sort(arr):
     """
-    :param arr:
+    :param : arr
     :return: sorted arr
     :pros : tidy and terse, no write operation on original data, good for multi-threading
     :cons : passing by copy, quite high space complexity compared with C.L.R.S way.
     """
-    if not arr:
+    if len(arr) < 2:
         return arr
     pivot = arr[0]
     less = quick_sort([elem for elem in arr[1:] if elem < pivot])
