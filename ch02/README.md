@@ -420,7 +420,7 @@ meet : [[0, 0], [0, 1]]
 
 ######project26 Boolean product
 ```python
-#uisng boolean_multiply in mat.py
+#using boolean_multiply in mat.py
 ```
 
 ######project27 Boolean matrix power
