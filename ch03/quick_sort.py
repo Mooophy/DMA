@@ -39,14 +39,17 @@ ls = quick_sort(ls)
 print(ls)
 
 li2 = [3, 2, 1, 0, 4]
-quick_sort_2_pointers(li2,0, len(li))
+quick_sort_2_pointers(li2, 0, len(li))
 print(li2)
 ls2 = ["aaa", "1234", "hello", "google", "hi"]
+quick_sort_2_pointers(ls2, 0, len(ls2))
 print(ls2)
 
 
 """
-output :
+output:
+[0, 1, 2, 3, 4]
+['1234', 'aaa', 'google', 'hello', 'hi']
 [0, 1, 2, 3, 4]
 ['1234', 'aaa', 'google', 'hello', 'hi']
 """
