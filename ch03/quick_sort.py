@@ -14,20 +14,21 @@ def quick_sort(arr):
 
 
 def quick_sort_2_pointers(arr, first, last):
+    """
+     C.L.R.S style that uses fast and slow pointers to sort in place.
+     O(1) for space complexity.
+    """
     if last-first < 2:
         return arr
     pivot, slow = last-1, first-1
     for fast in range(first, pivot):
-        if arr[fast] < pivot:
+        if arr[fast] <= arr[pivot]:
             slow += 1
             arr[fast], arr[slow] = arr[slow], arr[fast]
     arr[pivot], arr[slow+1] = arr[slow+1], arr[pivot]
     pivot = slow+1
     quick_sort_2_pointers(arr, first, pivot)
     quick_sort_2_pointers(arr, pivot+1, last)
-
-
-
 
 
 li = [3, 2, 1, 0, 4]
