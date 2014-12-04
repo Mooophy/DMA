@@ -13,13 +13,36 @@ def quick_sort(arr):
     return less + [pivot] + more
 
 
+def quick_sort_2_pointers(arr, first, last):
+    if last-first < 2:
+        return arr
+    pivot, slow = last-1, first-1
+    for fast in range(first, pivot):
+        if arr[fast] < pivot:
+            slow += 1
+            arr[fast], arr[slow] = arr[slow], arr[fast]
+    arr[pivot], arr[slow+1] = arr[slow+1], arr[pivot]
+    pivot = slow+1
+    quick_sort_2_pointers(arr, first, pivot)
+    quick_sort_2_pointers(arr, pivot+1, last)
+
+
+
+
+
 li = [3, 2, 1, 0, 4]
 li = quick_sort(li)
 print(li)
-
 ls = ["aaa", "1234", "hello", "google", "hi"]
 ls = quick_sort(ls)
 print(ls)
+
+li2 = [3, 2, 1, 0, 4]
+quick_sort_2_pointers(li2,0, len(li))
+print(li2)
+ls2 = ["aaa", "1234", "hello", "google", "hi"]
+print(ls2)
+
 
 """
 output :
