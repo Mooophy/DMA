@@ -6,20 +6,18 @@
 """
 
 
-def generate_formulae(operands, operators, max_size=2):
-    expr = operands
-    for size in range(max_size):
-        expr |= {lhs+op+rhs for lhs in expr for op in operators for rhs in expr}
-    return expr
+def fill(expr, operators, size=2):
+    for size in range(size):
+        expr |= {l + op + r for l in expr for op in operators for r in expr}
 
 
-ops = {'+', '-', '*', '/'}
-exp = {'x', 'y', 'z'}
-result = generate_formulae(exp, ops)
-print({elem for elem in result if len(elem) < 3})
-print({elem for elem in result if len(elem) < 5})
-print({elem for elem in result if len(elem) < 7})
-print({elem for elem in result if len(elem) < 1000})
+o = {'+', '-', '*', '/'}
+e = {'x', 'y', 'z'}
+fill(e, o)
+print({elem for elem in e if len(elem) < 3})
+print({elem for elem in e if len(elem) < 5})
+print({elem for elem in e if len(elem) < 7})
+print({elem for elem in e if len(elem) < 1000})
 
 
 """
