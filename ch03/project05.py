@@ -1,7 +1,7 @@
 def generate_formulae(operands, operators, max_size=2):
-    expr = set(operands)
+    expr = operands
     for size in range(max_size-1):
-        expr = expr.union({lhs+op+rhs for lhs in expr for op in operators for rhs in expr})
+        expr |= {lhs+op+rhs for lhs in expr for op in operators for rhs in expr}
     return expr
 
 
