@@ -2,7 +2,9 @@
 @author Yue Wang
 @date   05.12.2014
 @brief  Implemented for DMA
-@project 05 : generate well-formed formulae for operands : x,y,z and operators : + - * /
+
+@project 05 :
+        Generate well-formed formulae using : x,y,z and  + - * /
 """
 
 
@@ -17,7 +19,7 @@ fill(e, o)
 print({elem for elem in e if len(elem) < 3})
 print({elem for elem in e if len(elem) < 5})
 print({elem for elem in e if len(elem) < 7})
-print({elem for elem in e if len(elem) < 1000})
+print({elem for elem in e if len(elem) < 99})
 
 
 """
