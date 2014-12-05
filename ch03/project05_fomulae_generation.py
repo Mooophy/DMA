@@ -8,18 +8,18 @@
 """
 
 
-def fill(expr, operators, size=2):
-    for size in range(size):
-        expr |= {l + op + r for l in expr for op in operators for r in expr}
+def fill(expr, op, size=2):
+    for _ in range(size):
+        expr |= {l + o + r for l in expr for o in op for r in expr}
 
 
-o = {'+', '-', '*', '/'}
-e = {'x', 'y', 'z'}
-fill(e, o)
-print("elem that < 3 :", {elem for elem in e if len(elem) < 3})
-print("elem that < 5 :", {elem for elem in e if len(elem) < 5})
-print("elem that < 7 :", {elem for elem in e if len(elem) < 7})
-print("elem that < 99:", {elem for elem in e if len(elem) < 99})
+opt = {'+', '-', '*', '/'}
+epr = {'x', 'y', 'z'}
+fill(epr, opt)
+print("elem that < 3 :", {elem for elem in epr if len(elem) < 3})
+print("elem that < 5 :", {elem for elem in epr if len(elem) < 5})
+print("elem that < 7 :", {elem for elem in epr if len(elem) < 7})
+print("elem that < 99:", {elem for elem in epr if len(elem) < 99})
 
 
 """
