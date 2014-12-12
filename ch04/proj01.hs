@@ -1,3 +1,4 @@
+-- by Yue Wang 12.12.2014 coded for ch04 DMA
 -- proj01  find the number of r-permutations and of r-combinations
 rPermutations :: (Num a, Enum a) => a -> a -> a
 rPermutations n r = product (reverse [n-r+1..n])
