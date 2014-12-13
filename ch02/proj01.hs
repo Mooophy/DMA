@@ -6,6 +6,7 @@
  - -}
 
 maximum' :: (Ord a) => [a] -> a
+maximum' []     =   error "empty"
 maximum' [x]    =   x
 maximum' (x:xs) =   if x > rest  then x else rest 
                     where rest = maximum' xs
