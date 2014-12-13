@@ -85,6 +85,7 @@ bubbleSort xs = bubbleSort [x|x<-xs, x < maximum xs] ++ [x|x<-xs, x == maximum x
 ```
 
 ######project06
+- Python:
 ```python
 import search_and_sort as ss
 
@@ -96,7 +97,15 @@ output :
 [1, 2, 3, 6, 9, 78]
 """
 ```
-
+- Haskell:
+```haskell
+insertionSort :: (Ord a) => [a] -> [a]
+insertionSort [] = []
+insertionSort xs = fst (insert ([],xs))
+    where   insert(low, high) = if hs==[] then (ls, hs) else insert (ls, hs)
+        where   ls = [x|x<-low, x <= head high] ++ [head high] ++ [x|x<-low, x > head high]
+                hs = tail high
+```
 ######project07
 ```python
 import greedy as grd
