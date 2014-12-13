@@ -65,7 +65,7 @@ output :
 ```
 
 ######project05
-- My Python version:
+- Python
 ```python
 import search_and_sort as ss
 
@@ -77,7 +77,7 @@ output :
 [1, 2, 3, 6, 9, 78]
 """
 ```
-- My Haskell version:
+- Haskell
 ```haskell
 bubbleSort :: (Ord a) => [a] -> [a]
 bubbleSort [] = []
