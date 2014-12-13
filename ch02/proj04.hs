@@ -1,6 +1,6 @@
 {-
  - By Yue Wang 13.12.2014
- - proj04 binary search search.
+ - proj04 binary search.
  - -}
 binSearch :: (Ord a) => [a] -> a -> Int
 binSearch []  val = error "empty list"
