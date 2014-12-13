@@ -2,16 +2,8 @@
  - By Yue Wang 13.12.2014
  - proj02 Given a list, find the first and last occurrences of the largest element.
  - -}
-firstMaximum :: (Ord a) => [a] -> Int
-firstMaximum []     =   error "empty list"
-firstMaximum xs     
-    | head xs == maximum xs     =   0
-    | otherwise                 =   1 + firstMaximum (tail xs)
-
-
-lastMaximum :: (Ord a) => [a] -> Int
-lastMaximum []      =   error "empty list"
-lastMaximum xs
-    | last xs == maximum xs     =   length xs - 1
-    | otherwise                 =   lastMaximum (init xs) 
-
+firstAndLast :: (Ord a) => [a] -> (Int,Int)
+firstAndLast [] = error "empty list"
+firstAndLast xs = (firstMaximum xs, lastMaximum xs)
+    where   fstMax xs = if head xs == maximum xs    then 0                  else 1 + fstMax (tail xs)
+            lstMax xs = if last xs == maximum xs    then length xs - 1      else lstMax (init xs)
