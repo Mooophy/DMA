@@ -1,6 +1,5 @@
 next :: [Bool] -> [Bool]
 next [] = []
-next xs = if last xs==True then next(init xs) ++ [False] else init xs ++ [True]          
-    
-
-
+next xs 	
+	| 	last xs==True		=	next(init xs) ++ [False]
+	|	otherwise			=		 init xs  ++ [True] 		 
