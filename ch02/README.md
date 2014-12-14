@@ -255,6 +255,7 @@ main = do   print(seq')
 ```
 
 ######project11 encrypt and decrypt using Caesar cipher
+- Python
 ```python
 def encrypt(msg, offset=3):
     ret = ''
@@ -279,6 +280,31 @@ output :
 Iurp#idluhvw#fuhdwxuhv#zh#ghvluh#lqfuhdvh
 From fairest creatures we desire increase
 """
+```
+- Haskell:
+```haskell
+import Data.Char
+
+encrypt :: [Char] -> Int -> [Char]
+encrypt msg offset = map enc msg
+    where enc c = chr(mod (ord c + offset) 255)
+
+decrypt :: [Char] -> Int -> [Char]
+decrypt msg offset = map dec msg
+    where dec c = chr(mod (ord c - offset) 255)
+
+
+--test:
+sonnet = "From fairest creatures we desire increase"
+e = encrypt sonnet  3
+d = decrypt e       3
+main = do   print sonnet
+            print e
+            print d
+--output:
+--"From fairest creatures we desire increase"
+--"Iurp#idluhvw#fuhdwxuhv#zh#ghvluh#lqfuhdvh"
+--"From fairest creatures we desire increase"
 ```
 
 ######project12 Greatest common divisor
