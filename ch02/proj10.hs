@@ -4,11 +4,15 @@
  --}
 isPrime :: Int -> Bool
 isPrime num
-    | num < 2       =   False
-    | otherswise    =   check num (div num 2)
+    | num < 2    =  False
+    | otherwise  =  check num (div num 2)
     where   check num checker 
-                | checker == 1  =   True
-                | otherwise     =   (num % checker /= 0) && check num (checker-1)
+                | checker == 1  =  True
+                | otherwise     =  0 /= mod num checker  &&  check num (checker-1)
 
 
-main = print (isPrime 60)
+func x = if x then "prime" else "non prime"
+seq' = [195..200]
+main = do   print(seq')
+            print(map func (map isPrime seq'))
+          
