@@ -6,3 +6,6 @@ reverse' (x:xs) = reverse' xs ++ [x]
 
 main = do   print (reverse' "hello world")
             print (reverse' "")
+--output:
+--"dlrow olleh"
+--""
