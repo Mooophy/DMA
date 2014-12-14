@@ -1,7 +1,5 @@
 --proj05 Generate well-formed formulae using : x,y,z and  + - * /
 generate :: [[Char]] -> [[Char]] -> Int -> [[Char]]
-generate [] _ _  =  error "wrong inputs"
-generate _ [] _  =  error "wrong inputs"
 generate es os n 
     | n < 0      =  error "wrong inputs"
     | otherwise  =  first (gen (es,os,n))
