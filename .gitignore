@@ -25,3 +25,5 @@
 *.idea*
 *.pyc
 *swp
+*.hi
+*.o
