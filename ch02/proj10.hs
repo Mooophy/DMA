@@ -11,13 +11,16 @@ isPrime num
                 | otherwise     =  0 /= mod num checker  &&  check num (checker-1)
 
 
-{- test
- - output : 
- - [195,196,197,198,199,200]
- - ["non prime","non prime","prime","non prime","prime","non prime"]
- - -}
+
+
 func x = if x then "prime" else "non prime"
 seq' = [195..200]
 main = do   print(seq')
             print(map func (map isPrime seq'))
-          
+
+{-
+ - output : 
+ - [195,196,197,198,199,200]
+ - ["non prime","non prime","prime","non prime","prime","non prime"]
+ - -}
+
