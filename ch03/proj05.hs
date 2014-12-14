@@ -13,7 +13,7 @@ generate es os n
 --test:
 es = ["x","y","z"]
 os = ["+","-","*","/"]
-main = do print (generate es os 1)
+main = print (generate es os 1)
 --output:
 --["x","y","z","x+x","x-x","x*x","x/x","x+y","x-y","x*y","x/y","x+z","x-z","x*z","x/z","y+x","y-x","y*x","y/x","y+y","y-y","y*y","y/y","y+z","y-z","y*z","y/z","z+x","z-x","z*x","z/x","z+y","z-y","z*y","z/y","z+z","z-z","z*z","z/z"]
---
+
