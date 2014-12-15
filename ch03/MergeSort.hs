@@ -19,3 +19,6 @@ mergeSort xs = merge (mergeSort(fst pair)) (mergeSort(snd pair))
 li = [100,99..90]
 main = do print li
           print (mergeSort li)
+--output:	
+--[100,99,98,97,96,95,94,93,92,91,90]
+--[90,91,92,93,94,95,96,97,98,99,100]
